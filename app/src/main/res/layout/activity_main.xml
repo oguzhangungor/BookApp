@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bgcolor">
+    
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/seach_textview"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginRight="17dp"
+        android:layout_marginTop="51dp"
+        android:hint="Type book name or author"
+        android:gravity="center_vertical"
+        android:fontFamily="@font/aileronsemibold"
+        android:background="@color/white"
+        android:drawableEnd="@drawable/searchicon"
+        android:padding="16dp"
+        android:textColor="@color/searchtextcolor"
+        android:elevation="6dp"
+        android:shadowColor="@color/shadowcolor"
+        android:layout_marginBottom="31dp"
+        />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/seach_textview"
+            android:id="@+id/feedLayout"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/texttitlebook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Discover"
+                    android:fontFamily="@font/aileronregular"
+                    android:layout_marginLeft="17dp"
+                    android:textSize="20sp"
+                    android:textColor="#333333"
+                    android:textStyle="bold"
+                    />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/texttitlebook"
+                    android:layout_marginTop="16dp">
+
+                    <androidx.appcompat.widget.AppCompatImageButton
+                        android:id="@+id/feedslider"
+                        android:layout_width="match_parent"
+                        android:layout_height="192dp"
+                        android:src="@drawable/between"
+                        android:layout_marginLeft="17dp"
+                        android:layout_marginRight="17dp"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/moreicon"
+                        android:layout_alignRight="@+id/feedslider"
+                        android:layout_alignBottom="@+id/feedslider"
+                        android:layout_marginRight="10dp"
+                        />
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+        </LinearLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/feedLayout"/>
+    
+</RelativeLayout>
