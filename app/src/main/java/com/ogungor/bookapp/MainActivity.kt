@@ -2,23 +2,28 @@ package com.ogungor.bookapp
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.viewpager.widget.ViewPager
+import androidx.viewpager2.widget.ViewPager2
+
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var viewPager: ViewPager2
 
-    private lateinit var viewPager: ViewPager
-    private lateinit var viewPagerAdapter: ViewPagerAdapter
+
+    private val sliderViewPagerAdapter = SliderViewPagerAdapter(
+        listOf(
+            SliderHolder(
+                R.drawable.between
+            )
+        )
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_main)
+        viewPager=findViewById(R.id.sliderViewPager)
+        viewPager.adapter=sliderViewPagerAdapter
 
-        viewPager=findViewById(R.id.viewSlider)
-
-        viewPagerAdapter=ViewPagerAdapter()
-
-        viewPager.setAdapter(viewPagerAdapter)
 
     }
 }
