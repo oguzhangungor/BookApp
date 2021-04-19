@@ -20,9 +20,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        viewPager=findViewById(R.id.sliderViewPager)
-        viewPager.adapter=sliderViewPagerAdapter
+        setContentView(R.layout.activity_main2)
+        /*viewPager=findViewById(R.id.sliderViewPager)
+        viewPager.adapter=sliderViewPagerAdapter*/
 
 
     }
